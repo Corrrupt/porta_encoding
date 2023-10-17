@@ -14,10 +14,8 @@ while True:  # Keep looping until break condition is met (good key)
     print("Invalid key.. exclude numbers, spaces, or punctuation")
 
 
-# gets rid of numbers and punctuation from message
-message_to_encode = re.sub(
-    r"\d|[" + escaped_punctuation + "]", "", message_to_encode)
-message_to_encode = message_to_encode.lower()  # makes the message lowercase
+# gets rid of numbers and punctuation from message and sets it to lowercase
+message_to_encode = re.sub(r"\d|[" + escaped_punctuation + "]", "", message_to_encode).lower()
 
 
 # ----ENCODING FUNCTION UNDER HERE-------
